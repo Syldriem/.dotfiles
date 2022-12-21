@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/syldriem/.config/nvim/lua/elliot'
+let g:netrw_dirhist_8='/home/syldriem/.config/nvim/lua'
+let g:netrw_dirhist_7='/home/syldriem/.config/nvim'
+let g:netrw_dirhist_6='/home/syldriem/.config/nvim/lua/elliot'
+let g:netrw_dirhist_5='/home/syldriem/.config/nvim/lua'
+let g:netrw_dirhist_4='/home/syldriem/.config/nvim'
+let g:netrw_dirhist_3='/home/syldriem/.config/nvim/after'
+let g:netrw_dirhist_2='/home/syldriem/.config/nvim/after/plugin'
+let g:netrw_dirhist_1='/home/syldriem/.config/nvim/after'
+let g:netrw_dirhist_0='/home/syldriem/.config/nvim'
