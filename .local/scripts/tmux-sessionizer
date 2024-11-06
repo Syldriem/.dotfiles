@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~ ~/go/src ~/projects -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~ ~/go/src ~/projects /mnt/c/Users/downe /mnt/c/Users/downe/Lexicon/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

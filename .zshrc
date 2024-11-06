@@ -16,6 +16,7 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 export PATH="$HOME/tmux-sessionizer:$PATH"
 export PATH="$HOME/.local/scripts/rust-analyzer-script:$PATH"
+export PATH="$HOME/keybinds:$PATH"
 source ~/.cargo/env
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,3 +111,26 @@ source ~/.zsh_profile
 alias luamake=/luamake
 alias vim=nvim
 alias config='/usr/bin/git --git-dir=/home/syldriem/.dotfiles/ --work-tree=/home/syldriem'
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# zsh parameter completion for the dotnet CLI
+
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+
+  # If the completion list is empty, just continue with filename selection
+  if [ -z "$completions" ]
+  then
+    _arguments '*::arguments: _normal'
+    return
+  fi
+
+  # This is not a variable assignment, don't remove spaces!
+  _values = "${(ps:\n:)completions}"
+}
+
+compdef _dotnet_zsh_complete dotnet

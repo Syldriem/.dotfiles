@@ -1,3 +1,11 @@
 export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 bindkey -s ^f "~/tmux-sessionizer\n"
+bindkey -s ^w "~/keybinds\n"
+
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]
+    then
+        export PATH=$PATH:$1
+    fi
+}
