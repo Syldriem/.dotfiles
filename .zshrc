@@ -12,9 +12,10 @@ ZSH_THEME="robbyrussell"
 
 export GO111MODULE=on
 export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 
-export PATH="$HOME/tmux-sessionizer:$PATH"
+# export PATH="$HOME/tmux-sessionizer:$PATH"
+export PATH="$HOME/.tmux-sessionizer:$PATH"
 export PATH="$HOME/.local/scripts/rust-analyzer-script:$PATH"
 export PATH="$HOME/keybinds:$PATH"
 source ~/.cargo/env
@@ -134,3 +135,4 @@ _dotnet_zsh_complete()
 }
 
 compdef _dotnet_zsh_complete dotnet
+eval "$(gh copilot alias -- zsh)"
